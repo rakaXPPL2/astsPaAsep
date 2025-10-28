@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pilihan Masa Depan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #444;
+      font-weight: bold;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .hasil {
+      margin-top: 20px;
+      background: #e7f1ff;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Form Pilihan Masa Depan</h2>
+    <form id="formPilihan">
+      <label>Nama:</label>
+      <input type="text" id="nama" placeholder="Masukkan nama anda" required>
+
+      <label>Jenis Kelamin:</label>
+      <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+      <input type="radio" name="gender" value="Perempuan"> Perempuan
+
+      <label>Apakah dari SMKN 1 Garut?</label>
+      <select id="sekolah">
+        <option value="SMKN 1 Garut">Ya, dari SMKN 1 Garut</option>
+        <option value="Bukan SMKN 1 Garut">Bukan</option>
+      </select>
+
+      <label>Pilih Universitas jika nanti lulus:</label>
+      <select id="universitas">
+        <option value="Universitas Gadjah Mada">Universitas Gadjah Mada</option>
+        <option value="Universitas Indonesia">Universitas Indonesia</option>
+        <option value="ITB">Institut Teknologi Bandung</option>
+        <option value="Universitas Padjadjaran">Universitas Padjadjaran</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+
+      <label>Ingin bekerja sebagai:</label>
+      <select id="pekerjaan">
+        <option value="Programmer">Programmer</option>
+        <option value="Guru">Guru</option>
+        <option value="Desainer">Desainer</option>
+        <option value="Teknisi">Teknisi</option>
+        <option value="Wirausaha">Wirausaha</option>
+      </select>
+
+      <button type="button" onclick="tampilkanHasil()">Kirim</button>
+    </form>
+
+    <div class="hasil" id="hasil"></div>
+  </div>
+
+  <script>
+    function tampilkanHasil() {
+      const nama = document.getElementById('nama').value;
+      const gender = document.querySelector('input[name="gender"]:checked')?.value;
+      const sekolah = document.getElementById('sekolah').value;
+      const universitas = document.getElementById('universitas').value;
+      const pekerjaan = document.getElementById('pekerjaan').value;
+
+      if (!nama || !gender) {
+        alert("Silakan isi semua data!");
+        return;
+      }
+
+      const hasilDiv = document.getElementById('hasil');
+      hasilDiv.style.display = 'block';
+      hasilDiv.innerHTML = `
+        <h3>Hasil Input:</h3>
+        <p><strong>Nama:</strong> ${nama}</p>
+        <p><strong>Jenis Kelamin:</strong> ${gender}</p>
+        <p><strong>Sekolah:</strong> ${sekolah}</p>
+        <p><strong>Pilihan Universitas:</strong> ${universitas}</p>
+        <p><strong>Pekerjaan yang diinginkan:</strong> ${pekerjaan}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
