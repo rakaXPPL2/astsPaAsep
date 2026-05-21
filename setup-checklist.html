@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Checklist - Dashboard Guru & Siswa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen py-8">
+    <div class="max-w-2xl mx-auto px-4">
+        <div class="bg-white rounded-3xl shadow-xl p-8">
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mb-4">
+                    <span class="text-white text-2xl">✓</span>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-900">Setup Checklist</h1>
+                <p class="text-gray-600 mt-2">Dashboard Guru & Siswa - SMKN 1 Garut</p>
+            </div>
+
+            <!-- Checklist Items -->
+            <div class="space-y-4">
+                <!-- Item 1: Database -->
+                <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <input type="checkbox" class="w-6 h-6 text-blue-600 rounded-lg cursor-pointer" id="check1">
+                        </div>
+                        <div class="flex-grow">
+                            <label for="check1" class="cursor-pointer">
+                                <h3 class="text-lg font-bold text-gray-900">✅ Database Sudah Diimport</h3>
+                                <p class="text-sm text-gray-600 mt-2 mb-3">
+                                    File <code class="bg-gray-200 px-2 py-1 rounded text-xs font-mono">database.sql</code> sudah dijalankan di phpMyAdmin
+                                </p>
+                                <div class="bg-white rounded-lg p-3 text-sm text-gray-700 border border-gray-200">
+                                    📝 <strong>Caranya:</strong>
+                                    <ol class="ml-4 mt-2 space-y-1 text-xs">
+                                        <li>1. Buka http://localhost/phpmyadmin</li>
+                                        <li>2. Klik tab SQL</li>
+                                        <li>3. Copy-paste isi database.sql</li>
+                                        <li>4. Klik Execute</li>
+                                    </ol>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Files -->
+                <div class="bg-green-50 border-2 border-green-200 rounded-2xl p-6 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <input type="checkbox" class="w-6 h-6 text-green-600 rounded-lg cursor-pointer" id="check2">
+                        </div>
+                        <div class="flex-grow">
+                            <label for="check2" class="cursor-pointer">
+                                <h3 class="text-lg font-bold text-gray-900">✅ File-file Sudah di Folder</h3>
+                                <p class="text-sm text-gray-600 mt-2 mb-3">
+                                    Semua file PHP sudah ada di <code class="bg-gray-200 px-2 py-1 rounded text-xs font-mono">htdocs/New folder/</code>
+                                </p>
+                                <div class="bg-white rounded-lg p-3 text-sm text-gray-700 border border-gray-200 space-y-1">
+                                    <div>✓ login.php</div>
+                                    <div>✓ dashboard.php</div>
+                                    <div>✓ student_view.php</div>
+                                    <div>✓ config.php</div>
+                                    <div>✓ database.sql</div>
+                                    <div>✓ README.md & SETUP.md</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Server -->
+                <div class="bg-purple-50 border-2 border-purple-200 rounded-2xl p-6 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <input type="checkbox" class="w-6 h-6 text-purple-600 rounded-lg cursor-pointer" id="check3">
+                        </div>
+                        <div class="flex-grow">
+                            <label for="check3" class="cursor-pointer">
+                                <h3 class="text-lg font-bold text-gray-900">✅ XAMPP Apache & MySQL Running</h3>
+                                <p class="text-sm text-gray-600 mt-2 mb-3">
+                                    XAMPP Control Panel menunjukkan Apache dan MySQL berstatus Running
+                                </p>
+                                <div class="bg-white rounded-lg p-3 text-sm text-gray-700 border border-gray-200 space-y-2">
+                                    <div>🔵 Apache - Running</div>
+                                    <div>🔵 MySQL - Running</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Access -->
+                <div class="bg-orange-50 border-2 border-orange-200 rounded-2xl p-6 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <input type="checkbox" class="w-6 h-6 text-orange-600 rounded-lg cursor-pointer" id="check4">
+                        </div>
+                        <div class="flex-grow">
+                            <label for="check4" class="cursor-pointer">
+                                <h3 class="text-lg font-bold text-gray-900">✅ Aplikasi Bisa Diakses</h3>
+                                <p class="text-sm text-gray-600 mt-2 mb-3">
+                                    Buka URL di browser dan halaman login muncul
+                                </p>
+                                <div class="bg-white rounded-lg p-3 text-sm text-gray-700 border border-gray-200 font-mono">
+                                    http://localhost/New folder/
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Test Login -->
+                <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-6 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <input type="checkbox" class="w-6 h-6 text-red-600 rounded-lg cursor-pointer" id="check5">
+                        </div>
+                        <div class="flex-grow">
+                            <label for="check5" class="cursor-pointer">
+                                <h3 class="text-lg font-bold text-gray-900">✅ Test Login Sebagai Guru</h3>
+                                <p class="text-sm text-gray-600 mt-2 mb-3">
+                                    Login dengan akun guru dan akses dashboard
+                                </p>
+                                <div class="bg-white rounded-lg p-3 text-sm text-gray-700 border border-gray-200 space-y-2">
+                                    <div>📌 Username: <code class="bg-gray-200 px-2 rounded text-xs font-mono">guru001</code></div>
+                                    <div>🔐 Password: <code class="bg-gray-200 px-2 rounded text-xs font-mono">password123</code></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: Test Student -->
+                <div class="bg-cyan-50 border-2 border-cyan-200 rounded-2xl p-6 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <input type="checkbox" class="w-6 h-6 text-cyan-600 rounded-lg cursor-pointer" id="check6">
+                        </div>
+                        <div class="flex-grow">
+                            <label for="check6" class="cursor-pointer">
+                                <h3 class="text-lg font-bold text-gray-900">✅ Test Login Sebagai Siswa</h3>
+                                <p class="text-sm text-gray-600 mt-2 mb-3">
+                                    Login dengan akun siswa dan akses dashboard
+                                </p>
+                                <div class="bg-white rounded-lg p-3 text-sm text-gray-700 border border-gray-200 space-y-2">
+                                    <div>📌 Username: <code class="bg-gray-200 px-2 rounded text-xs font-mono">siswa001</code> (atau siswa002-007)</div>
+                                    <div>🔐 Password: <code class="bg-gray-200 px-2 rounded text-xs font-mono">password123</code></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-2xl p-6 text-center">
+                <h2 class="text-2xl font-bold text-green-700 mb-2">🎉 Selamat!</h2>
+                <p class="text-gray-700 mb-4">
+                    Jika semua item sudah dicheck, aplikasi Anda sudah siap digunakan!
+                </p>
+                <div class="space-y-2">
+                    <p class="text-sm text-gray-600">
+                        📖 Baca <code class="bg-white px-2 py-1 rounded text-xs font-mono border border-gray-300">README.md</code> untuk dokumentasi lengkap
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        🚀 Baca <code class="bg-white px-2 py-1 rounded text-xs font-mono border border-gray-300">SETUP.md</code> untuk quick start
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature Preview -->
+            <div class="mt-8 bg-gray-50 rounded-2xl p-6">
+                <h3 class="text-lg font-bold text-gray-900 mb-4">🎯 Fitur yang Tersedia</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-semibold text-blue-600 mb-3">Guru Features:</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>✅ Dashboard dengan statistik</li>
+                            <li>✅ Buat & manage tugas</li>
+                            <li>✅ Filter tugas per kelas</li>
+                            <li>✅ Lihat status pengumpulan siswa</li>
+                            <li>✅ List pengumpulan dengan status</li>
+                            <li>✅ Mobile-responsive interface</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-green-600 mb-3">Siswa Features:</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>✅ Lihat tugas dari guru</li>
+                            <li>✅ Filter tugas berdasarkan status</li>
+                            <li>✅ Baca instruksi tugas</li>
+                            <li>✅ Update status pengerjaan</li>
+                            <li>✅ Lihat profile & logout</li>
+                            <li>✅ Mobile-responsive interface</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
+                <p>Dashboard Guru & Siswa - SMKN 1 Garut</p>
+                <p class="text-xs mt-2">Created with ❤️ using PHP, MySQL, Tailwind CSS & Lucide Icons</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load saved checklist from localStorage
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            const key = `check_${checkbox.id}`;
+            checkbox.checked = localStorage.getItem(key) === 'true';
+            
+            checkbox.addEventListener('change', () => {
+                localStorage.setItem(key, checkbox.checked);
+            });
+        });
+    </script>
+</body>
+</html>
